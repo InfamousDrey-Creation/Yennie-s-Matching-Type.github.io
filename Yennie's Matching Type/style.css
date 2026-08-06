@@ -1,0 +1,229 @@
+/* Card layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Card faces */
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-family: Arial, sans-serif;
+}
+
+/* Fronts */
+.front {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Backs default */
+.back {
+  background: #2196F3;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* BACK 1 — girl image */
+.card:nth-child(1) .back {
+  background-image: url("763739868_2029966547663062_1162506790269686285_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 10 — girl image */
+.card:nth-child(10) .back {
+  background-image: url("763739868_2029966547663062_1162506790269686285_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 4 — new girl image */
+.card:nth-child(4) .back {
+  background-image: url("764924166_2045736816043098_2329575016356095711_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 6 — new girl image */
+.card:nth-child(6) .back {
+  background-image: url("764924166_2045736816043098_2329575016356095711_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+/* BACK 4 — new girl image */
+.card:nth-child(2) .back {
+  background-image: url("765034908_1206428028336534_6041307736418024132_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 6 — new girl image */
+.card:nth-child(7) .back {
+  background-image: url("765034908_1206428028336534_6041307736418024132_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+/* BACK 4 — new girl image */
+.card:nth-child(8) .back {
+  background-image: url("766913532_27702320822754920_4447690001073204377_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 6 — new girl image */
+.card:nth-child(9) .back {
+  background-image: url("766913532_27702320822754920_4447690001073204377_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+/* BACK 4 — new girl image */
+.card:nth-child(3) .back {
+  background-image: url("764693114_1040700355247529_7134388216520468680_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+
+/* BACK 6 — new girl image */
+.card:nth-child(5) .back {
+  background-image: url("764693114_1040700355247529_7134388216520468680_n.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent;
+}
+/* FRONT — tarot image for all cards */
+.front {
+  background-image: url("Decorative Tarot Cards Design for Spiritual Creativity – Download Unique Art.jpg");
+  background-size: cover;
+  background-position: center;
+  color: transparent; /* hides the numbers */
+}
+/* FULL PAGE BACKGROUND */
+body {
+  background-image: url("download\ \(2\).jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.banner {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.banner img {
+  width: 60%;        /* smaller than before */
+  max-width: 700px;  /* also reduced */
+  border-radius: 10px;
+}
+/* LOBBY SCREEN */
+#lobby {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* dark overlay */
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.lobby-content {
+  text-align: center;
+}
+
+.lobby-banner {
+  width: 60%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+#startBtn {
+  font-size: 28px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 10px;
+  background: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#startBtn:hover {
+  background: #6faee2;
+  transform: scale(1.05);
+}
+#lobbyVideo {
+  width: 60%;          /* smaller video */
+  max-width: 600
+  px;    /* hard limit */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin: 0 auto 20px auto; /* centers horizontally */
+  display: block;
+}
+#startBtn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#startBtn img {
+  width: 40%;          /* adjust size */
+  max-width: 500px;    /* smaller than before */
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+#startBtn img:hover {
+  transform: scale(1.05);
+}
+
